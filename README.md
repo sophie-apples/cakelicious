@@ -1,45 +1,82 @@
-<img src="https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png" style="margin: 0;">
+# Cakelicious
+## A brand of bake ware
 
-Welcome sophie-apples,
+An application which stores recipes for baked food.
+The site allows users to search for and browse recipes, and  to create a user account so that they can add, edit and delete their own recipes.
+The website promotes branded bake ware required for the recipes to its users, and provides accessible links to make online purchases.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use.
+Business goals:
+*Build brand awareness
+*Create a positive brand image
+*Associate brand with real bakers; brand is credible and trustworthy
+*Encourage users to purchase products from Cakelicious
+*Provide excellent UX to keep users returning to the site for all their baking needs
 
-## Gitpod Reminders
+Customer goals:
+*To easily search for recipes to cook
+*To find inspiration for baking
+*An online cookbook/database which they can add to via a user account
+*Clear and easy to use website
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## UX
 
-`python3 -m http.server`
+#### The Client
+#####The ideal client for this website is:
+*A baking enthusiast
+*Someone who bakes either for a hobby or in a more professional setting, such as a small bakery or cake shop, or a stall holder, etc.
+*Someone who identifies as a cook and wants to own the best kitchen tools for the purpose
+*Someone who uses social media and shares their cooking projects online (eg. Pinterest, instagram)
+*Someone who is cooking a one-off special recipe for an occasion
 
-A blue button should appear to click: *Make Public*,
+#####Visitors are searching for:
+*Tried & tested recipes to cook
+*Baking inspiration
+*A database of recipes
+*A way to store and share recipes on the site and a way to share recipes on social media
 
-Another blue button should appear to click: *Open Browser*.
+#####This app 
+*Provides users with a database of reliable recipes tried and tested by other bakers
+*Users have the option to create an account and easily add their own creations to both store and easily access, and to share with other baking enthusiasts, or to show off their creations on social media
+*The site acts as an online cookbook- somewhere to search for and store recipes for now and for future use
+*Quick easy access to a database of recipes without having to register
+*Easy to navigate
+*Easy to add user’s own recipes
+*Easy to share recipes
+*Easy access to purchase all and any tools required for baking projects
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+#####User Stories:
+*I want to search for recipes to cook, usually I know what I want to make and I’m looking for the best recipe to cook.
+*I want to browse recipes for inspiration
+*I am looking for a recipe for a special occasion, such as a birthday or other celebration
+*I want to be able to search for and find recipes which cater for particular dietary needs- I’m gluten intolerant/ vegan/ lactose intolerant/ low sugar/ on a diet, etc
+*I want one place I know can go to find a reliable recipe, and a wide selection of recipes
+*I want to share my baking successes online, or with friends and family
+*I want an app where I can store my recipes and recipes I like
+*I do not bake very often, so when I do I may need to buy equipment to help me cook, such as cake tins or mixers. I don’t want to have to research this online, so a reliable brand is convenient
+*I bake often and so I like to have all the most up to date and high quality bake ware for my kitchen, including items to improve presentation and niche items
 
-A blue button should appear to click: *Make Public*,
+##Features
+*Search for recipes by keywords, ingredients and specific recipe titles
+*Browse all recipes
+*Register and Log in to the site
+*Registered users can create own recipes to the database where they can be read by other users
+*Registered users can easily access their recipes to update and delete
+*Links to purchase Cakelicious equipment
+?? *Users can include a photo of the final product
 
-Another blue button should appear to click: *Open Browser*.
+##Desirable features for future implementation
+*Easily share recipes to social media using the link to the specific recipe page, displayed as a thumbnail
+*Ability for users to rate recipes they have cooked and easily view a recipes ratings
+*Ability to search for recipes with a high rating
+*Ability for users to comment on recipes and read other’s comments on recipes
+*An internal shop, so that users can add equipment to their ‘basket’ when they are planning what to cook and make a purchase on the site.
+*Ability to view a specific user’s recipe collection
+*Ability to store liked recipes in a user account for easy access
+*Take email addresses to send promotional material and special offers
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-## Updates Since The Instructional Video
+## Structure
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
---------
-
-Happy coding!
+### Database design:
+* user: username, email, password
+* recipe: name, description, equipment, ingredients, method, user[username], image, (to be added: rating/likes)
