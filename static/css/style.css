@@ -1,0 +1,13 @@
+.brand-font{
+    font-family: 'Dancing Script', cursive;
+}
+
+.center-search {
+    margin: auto;
+    width: 50%;
+    border-radius: 100px;
+}
+
+.searchbar {
+    background: url("static/images/homecake.jpg") no-repeat right center fixed;
+}

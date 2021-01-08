@@ -80,3 +80,7 @@ Customer goals:
 ### Database design:
 * user: username, email, password
 * recipe: name, description, equipment, ingredients, method, user[username], image, (to be added: rating/likes)
+
+
+# Credits
+homepage image <span>Photo by <a href="https://unsplash.com/@idgeek?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Samuel Ramos</a> on <a href="https://unsplash.com/s/photos/cake-images-banner?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
