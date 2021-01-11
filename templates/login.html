@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="brand-font center-align deep-orange-text text-lighten-3">Register</h3>
+    <h3 class="brand-font center-align deep-orange-text text-lighten-3">Log In</h3>
     
     <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('login') }}">
             <div class="card-panel">
                 <!-- username -->
                 <div class="row">
@@ -13,14 +13,6 @@
                         <input name="username" id="username" type="text" minlength="4" 
                             maxlength="15" pattern="^[a-zA-Z0-9]{4,15}$" class="validate" required>
                         <label for="username">user name</label>
-                    </div>
-                </div>
-                <!-- email -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix deep-orange-text text-lighten-3">alternate_email</i>
-                        <input name="email" id="email" type="text" class="validate" required>
-                        <label for="email">email</label>
                     </div>
                 </div>
                 <!-- password -->
@@ -34,18 +26,19 @@
                 </div>
                 <!-- register button -->
                 <div class="row">
-                    <button type="submit" class="col s12 btn-large deep-orange lighten-3">Register
-                        <i class="material-icons">person_add</i>
+                    <button type="submit" class="col s12 btn-large deep-orange lighten-3">Log In
+                        <i class="material-icons">login</i>
                     </button>
                 </div>
             </div>
         </form>
     </div>
+
     <div class="row">
         <div class="col s12">
             <p class="center-align">
-                Already registered?
-                <a href="{{ url_for('login') }}" class="deep-orange-text text-lighten-3">Log In</a>
+                Are you new here?
+                <a href="{{ url_for('register') }}" class="deep-orange-text text-lighten-3">Register</a>
             </p>
         </div>
     </div>
