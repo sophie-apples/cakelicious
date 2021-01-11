@@ -1,7 +1,20 @@
 
 {% extends "base.html" %}
 {% block content %}
-
+    <div class="parallax-container">
+        <div class="parallax"><img class="home-image" src="static/images/homecake.jpg"></div>
+        <div class="row">
+            <div class="col s8 offset-s2 l6 offset-l3">
+                <form class="">
+                    <div class="input-field search-field">
+                        <i class="material-icons prefix">search</i>
+                        <textarea id="search_recipes" class="materialize-textarea"></textarea>
+                        <label for="search_recipes">search recipes</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 {% for recipes in recipes %}
 <div class="row">
     <div class="col s12">

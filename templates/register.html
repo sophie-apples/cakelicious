@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="brand-font center-align deep-orange-text text-lighten-3">Register</h3>
+    
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <form class="card-panel">
+                <!-- username -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix deep-orange-text text-lighten-3">person_add</i>
+                        <input name="username" id="username" type="text" class="validate">
+                        <label for="username">user name</label>
+                    </div>
+                </div>
+                <!-- email -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix deep-orange-text text-lighten-3">alternate_email</i>
+                        <input name="email" id="email" type="text" class="validate">
+                        <label for="email">email</label>
+                    </div>
+                </div>
+                <!-- password -->
+                <div class="row">
+                    <div class="input-field col s12">
+                        <i class="material-icons prefix deep-orange-text text-lighten-3">vpn_key</i>
+                        <input name="password" id="password" type="text" class="validate">
+                        <label for="password">password</label>
+                    </div>
+                </div>
+                <!-- register button -->
+                <button type="submit" class="col s12 btn-large deep-orange lighten-3">Register
+                    <i class="material-icons">login</i>
+                </button>
+                
+                <span class="white-text">I am a very simple card. I am good at containing small bits of information.
+                    I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
+                </span>
+            </form>
+        </div>
+    </div>
+    
+
+{% endblock %}
