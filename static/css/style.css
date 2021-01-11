@@ -50,6 +50,12 @@ body {
     max-width: auto;
 }
 
+@media (max-width: 576px){
+    .card .card-content {
+        padding: 10px;
+    }
+}
+
 .collapsible{
     margin: 0;
     border:none;
