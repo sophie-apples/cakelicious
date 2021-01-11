@@ -27,6 +27,15 @@ body {
     max-width: auto;
 }
 
+#collapsible {
+    margin: 0em;
+    
+}
+
+ul {
+    margin: 0em;
+    
+}
 .drop-down-font {
     color: #ffab91;
     font-size: 15px;

@@ -24,12 +24,6 @@ def get_recipes():
     return render_template("get_recipes.html", recipes = recipes)
 
 
-@app.route("/recipe_display")
-def recipe_display():
-    recipes = mongo.db.recipes.find()
-    return render_template("recipe.html", recipes = recipes)
-
-
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
