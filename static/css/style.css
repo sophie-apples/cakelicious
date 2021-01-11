@@ -7,9 +7,40 @@ body {
     font-family: 'Dancing Script', cursive;
 }
 
+.parallax-container{
+    height: 200px;
+}
+
+@media (min-width: 992px) {
+    .parallax-container{
+    height: 300px;
+    }
+}
+
+#search_recipes {
+    border-bottom: none;
+}
+
+.search-field{
+    background-color: #fff;
+    color: #ffab91;
+    border-radius: 100px;
+    text-align: center;
+    margin-left:20%;
+    margin-right:20%;
+}
+
+.home-image{
+    height: 200px;
+}
+
 #brand {
     font-size: 40px;
     padding-right: 20px;
+}
+
+.search-col{
+    width: 40%;
 }
 
 .center-search {
@@ -18,24 +49,11 @@ body {
     border-radius: 100px;
 }
 
-.searchbar {
-    background: url("static/images/homecake.jpg") no-repeat right center fixed;
-}
-
 .card-image {
     max-height: 10%;
     max-width: auto;
 }
 
-#collapsible {
-    margin: 0em;
-    
-}
-
-ul {
-    margin: 0em;
-    
-}
 .drop-down-font {
     color: #ffab91;
     font-size: 15px;

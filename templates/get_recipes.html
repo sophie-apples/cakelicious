@@ -2,16 +2,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-
-<div class="col s12 m7">
+{% for recipes in recipes %}
+<div class="col s12">
     <div class="card horizontal">
         <div class="card-image">
             <img src="static/images/homecake.jpg">
         </div>
         <div class="card-stacked">
             <div class="card-content">
-                
-                    {% for recipes in recipes %}
                     <h3 class="header cake-font">
                     {{ recipes.recipe_name }}
                     </h3><br>
@@ -35,8 +33,9 @@
             </li>
         </ul>
     </div>
-    
 </div>
+<br>
+
 {% endfor %}
     
 

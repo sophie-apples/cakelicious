@@ -83,4 +83,5 @@ Customer goals:
 
 
 # Credits
+<span>Photo by <a href="https://unsplash.com/@miracletwentyone?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Joseph Gonzalez</a> on <a href="https://unsplash.com/s/photos/carrot-cake?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
 homepage image <span>Photo by <a href="https://unsplash.com/@idgeek?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Samuel Ramos</a> on <a href="https://unsplash.com/s/photos/cake-images-banner?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
