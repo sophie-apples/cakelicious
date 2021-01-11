@@ -31,16 +31,12 @@ body {
 }
 
 .home-image{
-    height: 200px;
+    height: 800px;
 }
 
 #brand {
     font-size: 40px;
     padding-right: 20px;
-}
-
-.search-col{
-    width: 40%;
 }
 
 .center-search {
@@ -52,6 +48,15 @@ body {
 .card-image {
     max-height: 10%;
     max-width: auto;
+}
+
+.collapsible{
+    margin: 0;
+    border:none;
+}
+
+.card{
+    margin-bottom: 0;
 }
 
 .drop-down-font {
@@ -67,7 +72,7 @@ body {
 }
 
 .description-paragraph {
-    font-size: 15px;
+    font-size: 13px;
 }
 
 @media (min-width: 992px){
@@ -79,6 +84,9 @@ body {
     }
     .drop-down-font {
     font-size: 20px;
-}
+    }
+    .description-paragraph {
+    font-size: 20px;
+    }
 }
 
