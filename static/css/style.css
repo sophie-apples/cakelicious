@@ -11,3 +11,8 @@
 .searchbar {
     background: url("static/images/homecake.jpg") no-repeat right center fixed;
 }
+
+.card-image {
+    max-height: 10%;
+    max-width: auto;
+}

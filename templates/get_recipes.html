@@ -1,0 +1,39 @@
+
+{% extends "base.html" %}
+{% block content %}
+
+
+  <div class="col s12 m7">
+    
+    <div class="card horizontal">
+      <div class="card-image">
+        <img src="static/images/homecake.jpg">
+      </div>
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>
+            {% for recipes in recipes %}
+                <h4 class="header">
+                {{ recipes.recipe_name }}
+                </h4><br>
+                <em>{{ recipes.recipe_description }}</em><br>
+                <span>Added By: {{ recipes.user }}</span>
+            {% endfor %}
+        </p>
+        </div>
+        <div class="card-action">
+          <a href="{{ url_for('recipe_display') }}">View recipe</a>
+        </div>
+      </div>
+    </div>
+  </div>
+    {% for recipes in recipes %}
+        {{ recipes.recipe_name }}<br>
+        {{ recipes.recipe_description }}<br>
+        {{ recipes.equipment }}<br>
+        {{ recipes.ingredients }}<br>
+        {{ recipes.method }}<br>
+        {{ recipes.user }}
+    {% endfor %}
+
+{% endblock %}
