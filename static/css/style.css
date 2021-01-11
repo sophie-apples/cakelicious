@@ -7,6 +7,12 @@ body {
     font-family: 'Dancing Script', cursive;
 }
 
+.flashes h4{
+    padding: 1em;
+    color: #fff;
+    
+}
+
 .parallax-container{
     height: 200px;
 }
@@ -39,7 +45,6 @@ body {
 
 .center-search {
     margin: auto;
-    
     border-radius: 100px;
 }
 
