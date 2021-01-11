@@ -8,6 +8,7 @@
       rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}" type="text/css">
     <title>Cakelicious</title>
 </head>
@@ -15,7 +16,7 @@
     <!-- main navbar -->
     <nav>
         <div class="nav-wrapper deep-orange lighten-3">
-            <a href="#" class="brand-logo right brand-font">Cakelicious</a>
+            <a href="{{url_for('get_recipes')}}" class="brand-logo right brand-font" id="brand">cakelicious</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li><a href="{{url_for('get_recipes')}}">Home</a></li>

@@ -4,7 +4,7 @@
 
 {% for recipes in recipes %}
     <div class="row">
-        <!-- user cake image-->
+        <!-- cake image-->
         <div class="col s4">
             <div class="card">
                 <div class="card-image">
@@ -12,13 +12,14 @@
                 </div>
             </div>
         </div>
-        <!-- user cake title -->
+        <!-- cake title -->
         <div class="col s8">
             <h3>{{ recipes.recipe_name}}</h3>
             <p>{{ recipes.recipe_description }}</p>
             <em>Added By: {{recipes.user}}</em>
         </div>
     </div>
+    <!-- cake recipe -->
     <div class="row">
         <div class="col s4">
             <h5>Equipment</h5>
@@ -30,6 +31,42 @@
         <div class="col s8">
             <h4>Method</h4>
             <p>{{ recipes.method }}</p>
+        </div>
+    </div>
+    
+    <!-- Advertisements -->
+    <div class="row">
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="">
+                    <p> ADVERTISEMENT </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="">
+                    <p> ADVERTISEMENT </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="">
+                    <p> ADVERTISEMENT </p>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l4">
+            <div class="card">
+                <div class="card-image">
+                    <img src="">
+                    <p> ADVERTISEMENT </p>
+                </div>
+            </div>
         </div>
     </div>
     {% endfor %}
