@@ -16,38 +16,38 @@
         </div>
     </div>
 {% for recipes in recipes %}
-<div class="row">
-    <div class="col s12">
-        <div class="card horizontal">
-            <div class="card-image">
-                <img src="static/images/homecake.jpg">
-            </div>
-            <div class="card-stacked">
-                <div class="card-content">
-                        <h3 class="header cake-font">
-                        {{ recipes.recipe_name }}
-                        </h3><br>
-                        <p class="description-paragraph"><em>{{ recipes.recipe_description }}</em></p><br>
-                        <span>Added By: {{ recipes.user }}</span>
+    <div class="row">
+        <div class="col s12">
+            <div class="card horizontal">
+                <div class="card-image">
+                    <img src="static/images/homecake.jpg">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                            <h3 class="header cake-font">
+                            {{ recipes.recipe_name }}
+                            </h3><br>
+                            <p class="description-paragraph"><em>{{ recipes.recipe_description }}</em></p><br>
+                            <span>Added By: {{ recipes.user }}</span>
+                    </div>
                 </div>
             </div>
+            <ul class="collapsible">
+                <li>
+                    <div class="collapsible-header"><span class="drop-down-font"><i class="material-icons">keyboard_arrow_down</i>view recipe</span></div>
+                    <div class="collapsible-body">
+                        <h5>Equipment</h5>
+                        <span>{{ recipes.equipment }}</span>
+                        <h5>Ingredients</h5>
+                        <span>{{ recipes.ingredients }}</span>
+                        <h5>Method</h5>
+                        <span>{{ recipes.method }}</span>
+                    </div>
+                </li>
+            </ul>
         </div>
-        <ul class="collapsible">
-                    <li>
-                        <div class="collapsible-header"><span class="drop-down-font"><i class="material-icons">keyboard_arrow_down</i>view recipe</span></div>
-                        <div class="collapsible-body">
-                            <h5>Equipment</h5>
-                            <span>{{ recipes.equipment }}</span>
-                            <h5>Ingredients</h5>
-                            <span>{{ recipes.ingredients }}</span>
-                            <h5>Method</h5>
-                            <span>{{ recipes.method }}</span>
-                        </div>
-                    </li>
-                </ul>
     </div>
-</div>
-<br>
+    <br>
 
 {% endfor %}
     

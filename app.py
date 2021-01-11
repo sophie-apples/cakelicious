@@ -89,6 +89,11 @@ def myrecipes():
     return render_template("myrecipes.html", username=username)
 
 
+@app.route("/addrecipe")
+def addrecipe():
+    return render_template("addrecipe.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
