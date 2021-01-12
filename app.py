@@ -19,10 +19,10 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-@app.route("/get_recipes")
-def get_recipes():
+@app.route("/getrecipes")
+def getrecipes():
     recipes = mongo.db.recipes.find()
-    return render_template("get_recipes.html", recipes=recipes)
+    return render_template("getrecipes.html", recipes=recipes)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -80,14 +80,15 @@ def login():
     return render_template("login.html")
 
 
-@app.route("/myrecipes", methods=["GET", "POST"])
-def myrecipes():
+@app.route("/myrecipes/<username>", methods=["GET", "POST"])
+def myrecipes(username):
 
     # get session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     # display recipes by session user from db ()
     if session["user"]:
+        # display recipes added by the user
         myrecipes = mongo.db.recipes.find({
             "user": session["user"]})
         return render_template(
@@ -122,8 +123,8 @@ def addrecipe():
     return render_template("addrecipe.html")
 
 
-@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
-def edit_recipe(recipe_id):
+@app.route("/editrecipe/<recipe_id>", methods=["GET", "POST"])
+def editrecipe(recipe_id):
     recipe = mongo.db.recipes.find_one(
         {"_id": ObjectId(recipe_id)})
     return render_template("editrecipe.html", recipe=recipe)

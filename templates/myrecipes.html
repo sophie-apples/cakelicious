@@ -11,7 +11,7 @@
         <div class="col s12">
             <div class="card horizontal">
                 <div class="card-image">
-                    <img src="static/images/homecake.jpg">
+                    <img src="static/images/homecake.jpeg">
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
@@ -21,7 +21,7 @@
                             <p class="description-paragraph"><em>{{ recipes.recipe_description }}</em></p><br>
                             <span>Added By: {{ recipes.user }}</span>
                             <div class="card-buttons">
-                                <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small deep-orange lighten-3">
+                                <a href="{{ url_for('editrecipe', recipe_id=recipes._id) }}" class="btn-small deep-orange lighten-3">
                                     <i class="material-icons">edit</i>
                                 </a>
                                 <a href="" class="btn-small deep-orange lighten-3">
