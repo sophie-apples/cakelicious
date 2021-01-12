@@ -10,15 +10,18 @@
                         <!-- recipe_name field -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <input name="recipe_name" placeholder="Carrot Cake" id="recipe_name" type="text" class="validate" required>
+                                <input name="recipe_name" placeholder="Carrot Cake" id="recipe_name" 
+                                    value="{{ recipe.recipe_name }}" type="text" class="validate" required>
                                 <label for="recipe_name">Recipe Name</label>
                             </div>
                         </div>
                         <!-- recipe_description field -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea name="recipe_description" placeholder="A delicious gluten free carrot cake" id="recipe_description" type="text" 
-                                    class="materialize-textarea validate" minlength="10" maxlength="100" required></textarea>
+                                <textarea name="recipe_description" placeholder="A delicious gluten free carrot cake" id="recipe_description" 
+                                    type="text" class="materialize-textarea validate" minlength="10" maxlength="100" required>
+                                    {{- recipe.recipe_description -}}
+                                </textarea>
                                 <label for="recipe_description">Description</label>
                                 <span class="helper-text">make sure to include any dietary details</span>
                             </div>
@@ -27,7 +30,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea name="equipment" placeholder="Mixing bowl, hand held mixer, grater, etc" id="equipment" type="text" 
-                                    class="materialize-textarea validate" required></textarea>
+                                    class="materialize-textarea validate" required>{{- recipe.equipment -}}</textarea>
                                 <label for="equipment">Equipment</label>
                             </div>
                         </div>
@@ -35,7 +38,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea name="ingredients" placeholder="110g gluten free flour..." id="ingredients" type="text" 
-                                    class="materialize-textarea validate" required></textarea>
+                                    class="materialize-textarea validate" required>{{- recipe.ingredients -}}</textarea>
                                 <label for="ingredients">Ingredients</label>
                             </div>
                         </div>
@@ -43,7 +46,7 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea name="method" placeholder="STEP 1: coarsely grate the carrots" id="method" type="text" 
-                                    class="materialize-textarea validate" required></textarea>
+                                    class="materialize-textarea validate" required>{{- recipe.method -}}</textarea>
                                 <label for="method">Method</label>
                             </div>
                         </div>
@@ -51,6 +54,7 @@
                 </div>
                 <!-- add recipe button -->
                 <div class="row">
+                    <a href="{{ url_for('getrecipes') }}" class="btn-large deep-orange lighten-3">Cancel</a>
                     <button type="submit" class="col s12 btn-large deep-orange lighten-3" name="action">Add Recipe
                         <i class="material-icons">library_add</i>
                     </button>
