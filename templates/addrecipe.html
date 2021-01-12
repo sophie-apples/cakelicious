@@ -1,7 +1,20 @@
-
-{% extends "base.html %}
-<h3 class="brand-font center-align deep-orange-text text-lighten-3">Add new recipe</h3>
-
+{% extends "base.html" %}
 {% block content %}
+    <h3 class="brand-font center-align deep-orange-text text-lighten-3">Add new recipe</h3>
+    
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('addrecipe') }}">
+            <div class="card-panel">
+                
+                <!-- register button -->
+                <div class="row">
+                    <button type="submit" class="col s12 btn-large deep-orange lighten-3">Add Recipe
+                        <i class="material-icons">library_add</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
 {% endblock %}
+
     

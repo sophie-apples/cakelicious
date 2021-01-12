@@ -10,7 +10,6 @@ body {
 .flashes h4{
     padding: 1em;
     color: #fff;
-    
 }
 
 .parallax-container{
@@ -20,6 +19,23 @@ body {
 @media (min-width: 992px) {
     .parallax-container{
     height: 300px;
+    }
+}
+
+.title-writing {
+    padding-top: 20px;
+    font-size: 15px;
+}
+
+@media (min-width: 768px){
+    .title-writing {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 992px){
+    .title-writing {
+        font-size: 30px;
     }
 }
 

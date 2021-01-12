@@ -1,10 +1,14 @@
 
 {% extends "base.html" %}
 {% block content %}
+    <!-- header image -->
     <div class="parallax-container">
-        <div class="parallax"><img class="home-image" src="static/images/homecake.jpg"></div>
+        <div class="parallax"><img class="home-image" src="static/images/homecake.jpeg"></div>
         <div class="row">
             <div class="col s8 offset-s2 l6 offset-l3">
+                <!-- title writing -->
+                <div class="center-align title-writing">Find and share delicious cake recipes</div>
+                <!-- search field -->
                 <form class="">
                     <div class="input-field search-field">
                         <i class="material-icons prefix">search</i>
@@ -15,6 +19,7 @@
             </div>
         </div>
     </div>
+    <!-- recipe display -->
 {% for recipes in recipes %}
     <div class="row">
         <div class="col s12">
@@ -32,6 +37,7 @@
                     </div>
                 </div>
             </div>
+            <!-- collapsible recipe details -->
             <ul class="collapsible">
                 <li>
                     <div class="collapsible-header"><span class="drop-down-font"><i class="material-icons">keyboard_arrow_down</i>view recipe</span></div>
