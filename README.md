@@ -111,3 +111,5 @@ added maxlength and minlength to recipe description input to ensure that page la
 
 how to make sure that when the text is displayed from the db it is formatted with paragraphs?
 how to display recipes created by the session user?
+
+if you click logout when user already logged out, throws an error. fix this by removing logout option once user has logged out
