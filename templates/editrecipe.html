@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <h3 class="brand-font center-align deep-orange-text text-lighten-3">Edit recipe</h3>
+    <h3 class="brand-font center-align deep-orange-text text-lighten-3">Edit Recipe</h3>
     
     <div class="row">
         <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('editrecipe', recipe_id=recipe._id) }}">
@@ -52,10 +52,12 @@
                         </div>
                     </form>
                 </div>
-                <!-- add recipe button -->
+                <!-- buttons -->
                 <div class="row">
+                    <!-- cancel button -->
                     <a href="{{ url_for('getrecipes') }}" class="btn-large deep-orange lighten-3">Cancel</a>
-                    <button type="submit" class="col s12 btn-large deep-orange lighten-3" name="action">Add Recipe
+                    <!-- add recipe button -->
+                    <button type="submit" class="col s12 btn-large deep-orange lighten-3" name="action">Save Changes
                         <i class="material-icons">library_add</i>
                     </button>
                 </div>
