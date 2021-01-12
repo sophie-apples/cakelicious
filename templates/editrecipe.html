@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+    <h3 class="brand-font center-align deep-orange-text text-lighten-3">Edit recipe</h3>
+    
+    <div class="row">
+        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id) }}">
+            <div class="card-panel">
+                <div class="row">
+                    <form class="col s12">
+                        <!-- recipe_name field -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input name="recipe_name" placeholder="Carrot Cake" id="recipe_name" type="text" class="validate" required>
+                                <label for="recipe_name">Recipe Name</label>
+                            </div>
+                        </div>
+                        <!-- recipe_description field -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="recipe_description" placeholder="A delicious gluten free carrot cake" id="recipe_description" type="text" 
+                                    class="materialize-textarea validate" minlength="10" maxlength="100" required></textarea>
+                                <label for="recipe_description">Description</label>
+                                <span class="helper-text">make sure to include any dietary details</span>
+                            </div>
+                        </div>
+                        <!-- recipe equipment field -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="equipment" placeholder="Mixing bowl, hand held mixer, grater, etc" id="equipment" type="text" 
+                                    class="materialize-textarea validate" required></textarea>
+                                <label for="equipment">Equipment</label>
+                            </div>
+                        </div>
+                        <!-- recipe ingredients field -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="ingredients" placeholder="110g gluten free flour..." id="ingredients" type="text" 
+                                    class="materialize-textarea validate" required></textarea>
+                                <label for="ingredients">Ingredients</label>
+                            </div>
+                        </div>
+                        <!-- recipe method field -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea name="method" placeholder="STEP 1: coarsely grate the carrots" id="method" type="text" 
+                                    class="materialize-textarea validate" required></textarea>
+                                <label for="method">Method</label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- add recipe button -->
+                <div class="row">
+                    <button type="submit" class="col s12 btn-large deep-orange lighten-3" name="action">Add Recipe
+                        <i class="material-icons">library_add</i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}
