@@ -63,7 +63,6 @@ def login():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-
                     flash("Welcome, {}".format(
                         request.form.get("username")))
                     return redirect(url_for(
@@ -86,7 +85,11 @@ def myrecipes():
     # get session user's username from db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("myrecipes.html", username=username)
+
+    if session["user"]:
+        return render_template("myrecipes.html", username=username)
+
+    return redirect(url_for("login"))
 
 
 @app.route("/addrecipe", methods=["GET", "POST"])
@@ -105,6 +108,14 @@ def addrecipe():
         return redirect(url_for("myrecipes"))
 
     return render_template("addrecipe.html")
+
+
+@app.route("/logout")
+def logout():
+    # remove user from session cookie
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":

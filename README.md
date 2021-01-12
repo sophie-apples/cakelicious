@@ -104,3 +104,10 @@ homepage image Photo by Samuel Ramos on Unsplash https://unsplash.com/photos/Qxu
 * all cake recipes displayed on the homepage for browsing.
 * recipes displayed with card of image, cake name, user and decription. A drop down provides the ingredients, equipment and method.
 * For simplicity and intuition, to read the recipe the user does not have to navigate away from the page.
+
+
+## issues
+added maxlength and minlength to recipe description input to ensure that page layout stays looking nice
+
+how to make sure that when the text is displayed from the db it is formatted with paragraphs?
+how to display recipes created by the session user?
