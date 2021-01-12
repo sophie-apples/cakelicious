@@ -115,3 +115,13 @@ body {
     }
 }
 
+.card-buttons .btn-small {
+    margin: 3px;
+}
+
+@media (min-width:992px){
+    .card-buttons .btn-small {
+        margin: 3px;
+        margin-top:20px;
+    }
+}

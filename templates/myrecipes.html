@@ -20,22 +20,35 @@
                             </h3><br>
                             <p class="description-paragraph"><em>{{ recipes.recipe_description }}</em></p><br>
                             <span>Added By: {{ recipes.user }}</span>
+                            <div class="card-buttons">
+                                <button type="submit" class="btn-small deep-orange lighten-3">
+                                <i class="material-icons">edit</i>
+                            </button>
+                            <button type="submit" class="btn-small deep-orange lighten-3">
+                                <i class="material-icons">delete_forever</i>
+                            </button>
+                            </div>
                     </div>
                 </div>
             </div>
             <ul class="collapsible">
-                        <li>
-                            <div class="collapsible-header"><span class="drop-down-font"><i class="material-icons">keyboard_arrow_down</i>view recipe</span></div>
-                            <div class="collapsible-body">
-                                <h5>Equipment</h5>
-                                <span>{{ recipes.equipment }}</span>
-                                <h5>Ingredients</h5>
-                                <span>{{ recipes.ingredients }}</span>
-                                <h5>Method</h5>
-                                <span>{{ recipes.method }}</span>
-                            </div>
-                        </li>
-                    </ul>
+                <li>
+                    <div class="collapsible-header">
+                        <div class="row">
+                            <span class="drop-down-font"><i class="material-icons">keyboard_arrow_down</i>view recipe</span>
+                        </div>
+                    </div>
+                    
+                    <div class="collapsible-body">
+                        <h5>Equipment</h5>
+                        <span>{{ recipes.equipment }}</span>
+                        <h5>Ingredients</h5>
+                        <span>{{ recipes.ingredients }}</span>
+                        <h5>Method</h5>
+                        <span>{{ recipes.method }}</span>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
     <br>

@@ -110,6 +110,9 @@ homepage image Photo by Samuel Ramos on Unsplash https://unsplash.com/photos/Qxu
 added maxlength and minlength to recipe description input to ensure that page layout stays looking nice
 
 how to make sure that when the text is displayed from the db it is formatted with paragraphs?
-how to display recipes created by the session user?
+how to display recipes created by the session user from the database. 
+myrecipes = mongo.db.recipes.find({
+    "user": session["user"]})
+ 
 
 if you click logout when user already logged out, throws an error. fix this by removing logout option once user has logged out
