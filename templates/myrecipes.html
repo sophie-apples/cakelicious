@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
         <div class="row">
-            <h3 class="center-align brand-font">{{ username }}'s recipes</h3>
+            <h3 class="center-align brand-font">
+                {{ username }}'s recipes 
+                <a class="btn-floating btn-large deep-orange lighten-3" href="{{ url_for('addrecipe') }}"><i class="material-icons">add</i></a>
+            </h3>
         </div>
 {% for recipes in recipes %}
     <div class="row">
