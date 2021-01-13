@@ -151,7 +151,7 @@ def deleterecipe(recipe_id):
 
 @app.errorhandler(404)
 def page_not_found(error):
-# 404 error
+#404
     return render_template('404.html', page_title='404'), 404
 
 

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="parallax-container">
+    <div class="parallax"><img class="home-image" src="{{ url_for('static', filename='images/homecake.jpeg') }}"></div>
+    <div class="row">
+        <h3 class="center-align brand-font">Are you sure you want to permanently delete this recipe?</h3>
+    </div>
+    <div class="center-align">
+        <a href="{{url_for('getrecipes')}}" class="col s12 btn-large deep-orange lighten-3">No</a>
+        <a href="{{url_for('permanentdelete')}}" class="col s12 btn-large deep-orange lighten-3">Yes</a>
+    </div>
+</div>
+
+
+{% endblock %}
