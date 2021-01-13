@@ -29,10 +29,10 @@
                         <!-- recipe equipment field -->
                         <div class="row">
                             <div class="input-field col s12">
+<!-- new line to maintain formatting in edit recipe display -->
                                 <textarea name="equipment" placeholder="Mixing bowl, hand held mixer, grater, etc" id="equipment" type="text" 
-                                    class="materialize-textarea validate" required>
-                                    {%- for equipment in recipe.equipment -%}{{- equipment }}, 
-                                    {%- endfor %}
+                                    class="materialize-textarea validate" required>{% for equipment in recipe.equipment %}
+{{ equipment -}} {% endfor %}
                                 </textarea>
                                 <label for="equipment">Equipment</label>
                             </div>
@@ -40,16 +40,20 @@
                         <!-- recipe ingredients field -->
                         <div class="row">
                             <div class="input-field col s12">
+<!-- new line to maintain formatting in edit recipe display -->
                                 <textarea name="ingredients" placeholder="110g gluten free flour..." id="ingredients" type="text" 
-                                    class="materialize-textarea validate" required>{{- recipe.ingredients -}}</textarea>
+                                    class="materialize-textarea validate" required>{% for ingredients in recipe.ingredients %}
+{{ ingredients -}} {% endfor %}</textarea>
                                 <label for="ingredients">Ingredients</label>
                             </div>
                         </div>
                         <!-- recipe method field -->
                         <div class="row">
                             <div class="input-field col s12">
+<!-- new line to maintain formatting in edit recipe display -->
                                 <textarea name="method" placeholder="STEP 1: coarsely grate the carrots" id="method" type="text" 
-                                    class="materialize-textarea validate" required>{{- recipe.method -}}</textarea>
+                                    class="materialize-textarea validate" required>{% for method in recipe.method %}
+{{ method -}} {% endfor %}</textarea>
                                 <label for="method">Method</label>
                             </div>
                         </div>
