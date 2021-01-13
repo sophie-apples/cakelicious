@@ -117,7 +117,7 @@ def addrecipe():
             "user": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
-        flash("recipe successfully added")
+        flash("Recipe successfully added! Yum!")
         return redirect(url_for("getrecipes"))
 
     return render_template("addrecipe.html")
@@ -135,7 +135,7 @@ def editrecipe(recipe_id):
             "user": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
-        flash("recipe successfully updated")
+        flash("Recipe successfully updated!")
 
     recipe = mongo.db.recipes.find_one(
         {"_id": ObjectId(recipe_id)})
