@@ -3,7 +3,9 @@
 {% block content %}
     <!-- header image -->
     <div class="parallax-container">
-        <div class="parallax"><img class="home-image" src="static/images/homecake.jpeg"></div>
+        <div class="parallax">
+            <img class="home-image" src="{{ url_for('static', filename='images/homecake.jpeg') }}">
+        </div>
         <div class="row">
             <div class="col s8 offset-s2 l6 offset-l3">
                 <!-- title writing -->
@@ -25,7 +27,7 @@
         <div class="col s12">
             <div class="card horizontal">
                 <div class="card-image">
-                    <img src="static/images/homecake.jpg">
+                    <img src="{{ url_for('static', filename='images/homecake.jpg') }}">
                 </div>
                 <div class="card-stacked">
                     <div class="card-content">
