@@ -30,7 +30,10 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <textarea name="equipment" placeholder="Mixing bowl, hand held mixer, grater, etc" id="equipment" type="text" 
-                                    class="materialize-textarea validate" required>{{- recipe.equipment -}}</textarea>
+                                    class="materialize-textarea validate" required>
+                                    {%- for equipment in recipe.equipment -%}{{- equipment }}, 
+                                    {%- endfor %}
+                                </textarea>
                                 <label for="equipment">Equipment</label>
                             </div>
                         </div>

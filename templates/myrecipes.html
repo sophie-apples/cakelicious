@@ -38,16 +38,19 @@
                             <span class="drop-down-font"><i class="material-icons">keyboard_arrow_down</i>view recipe</span>
                         </div>
                     </div>
-                    
                     <div class="collapsible-body">
                         <h5>Equipment</h5>
-                        {% for item in recipes.equipment %}
-                            <li>{{ recipes.equipment }}</li>
-                        {% endfor %}
+                            {% for equipment in recipes.equipment %}
+                                <span>{{ equipment }}</span><br>
+                            {% endfor %}
                         <h5>Ingredients</h5>
-                        <span>{{ recipes.ingredients }}</span>
+                            {% for ingredients in recipes.ingredients %}
+                                <span>{{ ingredients }}</span><br>
+                            {% endfor %}
                         <h5>Method</h5>
-                        <span>{{ recipes.method }}</span>
+                            {% for method in recipes.method %}
+                                <span>{{ method }}</span><br>
+                            {% endfor %}
                     </div>
                 </li>
             </ul>
