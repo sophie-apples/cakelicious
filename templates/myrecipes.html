@@ -1,11 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="parallax-container">
-        <div class="parallax"><img class="home-image" src="{{ url_for('static', filename='images/homecake.jpeg') }}"></div>
         <div class="row">
             <h3 class="center-align brand-font">{{ username }}'s Recipes</h3>
         </div>
-    </div>
 {% for recipes in recipes %}
     <div class="row">
         <div class="col s12">
