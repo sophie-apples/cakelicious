@@ -92,6 +92,9 @@ items to improve presentation and niche items.
 # Credits
 homepage image Photo by Samuel Ramos on Unsplash https://unsplash.com/photos/QxudOE5_Xwo
 
+to find out how to add a file to mongodb and display it I watched this video which I found very helpful! https://www.youtube.com/watch?v=DsgAuceHha4
+
+
 ### site
 * nav bar
 * colors

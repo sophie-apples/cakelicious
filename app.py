@@ -108,13 +108,15 @@ def logout():
 @app.route("/addrecipe", methods=["GET", "POST"])
 def addrecipe():
     if request.method == "POST":
+        recipe_image = request.files['recipe_image']
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
             "equipment": request.form.get("equipment").splitlines(),
             "ingredients": request.form.get("ingredients").splitlines(),
             "method": request.form.get("method").splitlines(),
-            "user": session["user"]
+            "user": session["user"],
+            "recipe_image": recipe_image.filename
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe successfully added! Yum!")
@@ -151,7 +153,7 @@ def deleterecipe(recipe_id):
 
 @app.errorhandler(404)
 def page_not_found(error):
-#404
+    # 404
     return render_template('404.html', page_title='404'), 404
 
 
