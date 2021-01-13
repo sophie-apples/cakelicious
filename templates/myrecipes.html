@@ -41,7 +41,9 @@
                     
                     <div class="collapsible-body">
                         <h5>Equipment</h5>
-                        <span>{{ recipes.equipment }}</span>
+                        {% for item in recipes.equipment %}
+                            <li>{{ recipes.equipment }}</li>
+                        {% endfor %}
                         <h5>Ingredients</h5>
                         <span>{{ recipes.ingredients }}</span>
                         <h5>Method</h5>

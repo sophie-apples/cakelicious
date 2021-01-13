@@ -61,7 +61,7 @@ def login():
         if existing_user:
             # check password
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
                     flash("Welcome, {}".format(
                         request.form.get("username")))
@@ -111,14 +111,14 @@ def addrecipe():
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
-            "equipment": request.form.getlist("equipment"),
-            "ingredients": request.form.getlist("ingredients"),
-            "method": request.form.get("method"),
+            "equipment": request.form.get("equipment").splitlines(),
+            "ingredients": request.form.get("ingredients").splitlines(),
+            "method": request.form.get("method").splitlines(),
             "user": session["user"]
         }
         mongo.db.recipes.insert_one(recipe)
         flash("recipe successfully added")
-        return redirect(url_for("myrecipes"))
+        return redirect(url_for("getrecipes"))
 
     return render_template("addrecipe.html")
 
@@ -129,9 +129,9 @@ def editrecipe(recipe_id):
         submit = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
-            "equipment": request.form.getlist("equipment"),
-            "ingredients": request.form.getlist("ingredients"),
-            "method": request.form.get("method"),
+            "equipment": request.form.get("equipment").splitlines(),
+            "ingredients": request.form.get("ingredients").splitlines(),
+            "method": request.form.get("method").splitlines(),
             "user": session["user"]
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
@@ -146,7 +146,7 @@ def editrecipe(recipe_id):
 def deleterecipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe successfully deleted.")
-    return redirect(url_for("myrecipes"))
+    return redirect(url_for("getrecipes"))
 
 
 if __name__ == "__main__":
