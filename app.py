@@ -23,7 +23,7 @@ mongo = PyMongo(app)
 def getrecipes():
     recipes = mongo.db.recipes.find()
     return render_template("getrecipes.html", recipes=recipes)
-
+    
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
@@ -108,7 +108,6 @@ def logout():
 @app.route("/addrecipe", methods=["GET", "POST"])
 def addrecipe():
     if request.method == "POST":
-        recipe_image = request.files['recipe_image']
         recipe = {
             "recipe_name": request.form.get("recipe_name"),
             "recipe_description": request.form.get("recipe_description"),
@@ -116,7 +115,6 @@ def addrecipe():
             "ingredients": request.form.get("ingredients").splitlines(),
             "method": request.form.get("method").splitlines(),
             "user": session["user"],
-            "recipe_image": recipe_image.filename
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe successfully added! Yum!")
