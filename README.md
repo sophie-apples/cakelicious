@@ -58,23 +58,25 @@ I don’t want to have to research this online, so a reliable brand is convenien
 items to improve presentation and niche items.
 
 ## Features
-* Search for recipes by keywords, ingredients and specific recipe titles.
-* Browse all recipes.
-* Register and Log in to the site.
-* Registered users can create own recipes to add to the site, where they can be read by other users.
-* Registered users can easily access their recipes to update and delete.
-* Links to purchase Cakelicious equipment.
-?? * Users can include a photo of the final product
+* All users can search for recipes by keywords, ingredients and specific recipe titles.
+* All users can browse all recipes.
+* Users can register and log in to the site.
+* Registered users can create their own recipes to add to the site.
+* Registered users can easily access and read their recipes via 'My Recipes' page.
+* Registered users can update and delete their recipes.
 
 ## Desirable features for future implementation
+* Cakelicious Advertising & links to online shop
+* Links to purchase Cakelicious equipment.
 * Easily share recipes to social media using the link to the specific recipe page, displayed as a thumbnail.
 * Ability for users to rate recipes they have cooked and easily view a recipes ratings.
 * Ability to search for recipes with a high rating.
 * Ability for users to comment on recipes and read other’s comments on recipes.
 * An internal shop, so that users can add equipment to their ‘basket’ when they are planning what to cook and make a purchase on the site.
 * Ability to view a specific user’s recipe collection.
-* Ability to store liked recipes in a user account for easy access.
+* Ability to 'like' recipes and store 'liked' recipes in that user's account for easy access.
 * Email confirmation of Registration.
+* Users can add, display, edit and delete images to their recipes.
 
 
 ## Structure
@@ -91,8 +93,6 @@ items to improve presentation and niche items.
 
 # Credits
 homepage image Photo by Samuel Ramos on Unsplash https://unsplash.com/photos/QxudOE5_Xwo
-
-to find out how to add a file to mongodb and display it I watched this video which I found very helpful! https://www.youtube.com/watch?v=DsgAuceHha4
 
 
 ### site
