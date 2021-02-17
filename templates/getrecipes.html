@@ -10,57 +10,62 @@
             <div class="col s8 offset-s2 l6 offset-l3">
                 <!-- title writing -->
                 <div class="center-align title-writing">Find and share delicious cake recipes.</div>
+
                 <!-- search field -->
-                <form class="">
-                    <div class="input-field search-field">
+                <form action="{{ url_for('search') }}" method="POST" class="col s12">
+                    <div class="input-field search-field col s12 m8">
                         <i class="material-icons prefix">search</i>
-                        <textarea id="search_recipes" class="materialize-textarea"></textarea>
+                        <input type="text" name="search_recipes" id="search_recipes" class="validate" minlength="3" required>
                         <label for="search_recipes">search recipes</label>
+                    </div>
+                    <div class="col s12 m4">
+                        <a href="{{ url_for('getrecipes') }}" class="btn teal lighten-1">Reset</a>
+                        <button type="submit" class="btn deep-orange lighten-2">
+                            <i class="fas fa-search left"></i> Search
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <!-- recipe display -->
-{% for recipes in recipes %}
-    <div class="row">
-        <div class="col s12">
-            <div class="card horizontal">
-                <div class="card-stacked">
-                    <div class="card-content">
-                            <h3 class="header cake-font">
-                            {{ recipes.recipe_name }}
-                            </h3><br>
-                            <p class="description-paragraph"><em>{{ recipes.recipe_description }}</em></p><br>
-                            <span>Added By: {{ recipes.user }}</span>
+        <!-- recipe display -->
+    {% for recipes in recipes %}
+        <div class="row">
+            <div class="col s12">
+                <div class="card horizontal">
+                    <div class="card-stacked">
+                        <div class="card-content">
+                                <h3 class="header cake-font">
+                                {{ recipes.recipe_name }}
+                                </h3><br>
+                                <p class="description-paragraph"><em>{{ recipes.recipe_description }}</em></p><br>
+                                <span>Added By: {{ recipes.user }}</span>
+                        </div>
                     </div>
                 </div>
+                <!-- collapsible recipe details -->
+                <ul class="collapsible">
+                    <li>
+                        <div class="collapsible-header"><span class="drop-down-font"><i class="material-icons">keyboard_arrow_down</i>view recipe</span></div>
+                        <div class="collapsible-body">
+                            <h5>Equipment</h5>
+                                {% for equipment in recipes.equipment %}
+                                    <span>{{ equipment }}</span><br>
+                                {% endfor %}
+                            <h5>Ingredients</h5>
+                                {% for ingredients in recipes.ingredients %}
+                                    <span>{{ ingredients }}</span><br>
+                                {% endfor %}
+                            <h5>Method</h5>
+                                {% for method in recipes.method %}
+                                    <span>{{ method }}</span><br>
+                                {% endfor %}
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <!-- collapsible recipe details -->
-            <ul class="collapsible">
-                <li>
-                    <div class="collapsible-header"><span class="drop-down-font"><i class="material-icons">keyboard_arrow_down</i>view recipe</span></div>
-                    <div class="collapsible-body">
-                        <h5>Equipment</h5>
-                            {% for equipment in recipes.equipment %}
-                                <span>{{ equipment }}</span><br>
-                            {% endfor %}
-                        <h5>Ingredients</h5>
-                            {% for ingredients in recipes.ingredients %}
-                                <span>{{ ingredients }}</span><br>
-                            {% endfor %}
-                        <h5>Method</h5>
-                            {% for method in recipes.method %}
-                                <span>{{ method }}</span><br>
-                            {% endfor %}
-                    </div>
-                </li>
-            </ul>
         </div>
-    </div>
-    <br>
-
-{% endfor %}
-    
+        <br>
+    {% endfor %}
 
 {% endblock %}
